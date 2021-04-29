@@ -10,7 +10,6 @@ export default async function (name: string) {
     const { comType } = await inquirer.prompt([comTypeQues]);
     const tplPath = join(__dirname, '../../templates/componentTpl', comType);
     const files = readdirSync(tplPath);
-    // console.log('files', files);
     files.forEach(file => {
       const content = template(tplPath + '/' + file, { name });
       const dest = `src/pages/${name}/${file}`;

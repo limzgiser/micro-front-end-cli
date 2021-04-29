@@ -5,7 +5,6 @@ const tslib_1 = require("tslib");
 const fs_1 = require("fs");
 const execa_1 = tslib_1.__importDefault(require("execa"));
 function recursiveDir(sourceDir) {
-    console.log('tag', sourceDir);
     const res = [];
     function traverse(dir) {
         fs_1.readdirSync(dir).forEach((file) => {

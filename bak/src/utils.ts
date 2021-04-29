@@ -7,8 +7,7 @@ export interface FileItem {
 }
 
 function recursiveDir(sourceDir: string) {
-  console.log('tag', sourceDir);
-  
+
   const res: FileItem[] = [];
   function traverse(dir: string) {
     readdirSync(dir).forEach((file: string) => {
