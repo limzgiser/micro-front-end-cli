@@ -1,14 +1,14 @@
-import {CommandConstructor} from "commander";
- 
-import addPage from "./actions/addPage";
+import { CommandConstructor } from "commander";
+
+import addComponent from "./actions/addComponent";
 
 export default function (Command: CommandConstructor) {
   const generate = new Command('add');
- 
   generate
-    .command('p <name>')
+    .command('c <name>')
     .description('添加一个组件')
-    .action(addPage);
+    .option('--tsx', 'Is tsx', false)
+    .action(addComponent);
 
   return generate;
 }
