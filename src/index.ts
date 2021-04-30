@@ -13,6 +13,6 @@ program
   .option('-i --install', '是否自动安装依赖', false)
   .option('-pt --pkg-tool [value]', 'npm or yarn?')
   .action(create);
-program.addCommand(childCommand(Command));
+  program.addCommand(childCommand(Command));
 program.parse(process.argv)
  
