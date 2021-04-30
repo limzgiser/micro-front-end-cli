@@ -6,6 +6,13 @@
   "bin": {
     "mfc": "index.js"
   },
+  "files": [
+    "templates",
+    "dist",
+    "index.js",
+    "package.json",
+    "readme.md"
+  ],
   "scripts": {
     "build": "gulp"
   },
