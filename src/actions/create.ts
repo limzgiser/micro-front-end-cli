@@ -30,8 +30,10 @@ export default async function (projectName: string, options: CreateOptions) {
   let branch = appType + "_" + frameType;
   try {
     const spinner = ora(chalk.blue("初始化模版...")).start();
+    const githubUrl = "direct:https://github.com/limzgiser/mfc-cli.git#"
+    const giteeUrl ="direct:https://gitee.com/limzgis/micro-front-cli.git#"
     await downloadTemplate(
-      'direct:https://github.com/limzgiser/mfc-cli.git#' + branch,
+      giteeUrl + branch,
       projectName,
       { clone: true }
     );
